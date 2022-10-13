@@ -1,0 +1,94 @@
+# Cloud Computing Fundamentals
+
+## Cloud Computing
+
+A computação em nuvem é uma continuação de uma mudança de longo prazo na 
+forma como a computação e os recursos são gerenciados. É a continuação de um
+modelo na qual o cliente aluga uma infraestrutura de computação que é gerenciada
+por proficionais dedicados. A Equinix e a CenturyLink são as duas maiores
+provedoras de data centers nos EUA.
+
+### Primeira Onda
+
+O conceito da computação em nuvem começou com "colocação", que tradicionalmente
+não é considerada como computação em núvem, mas foi o início do processo de 
+transferência da infraestrutura de TI para fora da organização. As orgamizações
+economizavam dinheiro como a "colocação" pois não precisavam construir datacenters
+e os serviços relacionados. O provedor de "colocação" alugava tudo para a organização.
+
+### Segunda Onda
+
+Com a computação em núvem surgiram os data centers virtualizados, as máquinas 
+virtuais e as API's. A virtualização oferece elasticidade, uma vez que o 
+cliente automiza a aquisição da infrawstrutura ao invés de comprar hardware. 
+Com a virtualização, a infraestrutura ainda é mantida. O ambiente ainda é 
+controlado e configurado pelo cliente. Ela é como um data center local, mas 
+com a diferença de que o hardware está em outro local. 
+
+
+### Terceira Onda
+
+A onda seguinte da computação em núvem foi a núvem elástica totalmente automatizada.
+Ao invés do cliente manter a infraestrutura, passou a ter serviços automatizados.
+Em uma ambiente totalmente automatizado, os desenvolvedores não pensam em máquinas
+individuais. O serviço de provisiona e configura automaticamente a infraestrutura
+necessária para executar os aplicativos.
+
+
+
+### Timeline
+
+- **1980:** First Wave: Server on premises
+    
+    You own everything. It's yours to manage.
+
+-  **2000:** Second Wave: Data centers
+
+    You pay for the hardware but rent the space. Still yours to manage.
+
+- **2006:** First Generation Cloud: Virtualized data centers
+
+    You rent hardware and space, but still control and configure virtual machines.
+    Pay for what you provision.
+
+- **2009:** Third Wave: Managed Service
+
+    Completely elastic storage, processing, and machine learning so that you 
+    can invest your energy in great apps. Pay for what you use.
+
+
+
+## IaaS, PaaS, SaaS
+
+Este tópico mostra as diferenças principais entre infraestrutura como serviço, 
+plataforma como serviço e software como serviço.
+
+### IaaS
+
+O serviço fornece a arquitetura subjacente para você executar os servidores.
+CPU, memória, armazenamento e rede são disponibilizados como serviço, mas 
+o usuário precisa gerenciar o sistema operacional e a aplicação.
+
+### PaaS
+
+Todo ambiente será gerenciado pera o usuário, que, portanto, só precisará
+gerenciar seus aplicativos. A camada do sistema operacional é gerenciada como
+parte do serviço
+
+### SaaS
+
+A infraestrutura, a plataforma e o software são gerenciados pera o usuário.
+Você só precisa colocar seus dados no sistema. O SAP e Salesforce são exemplos
+comerciais de SaaS.
+
+### Produtos GCP
+* Compute Engine: IaaS (pay for what you allocate)
+* App Engine: PaaS (pay for what you use)
+* Managed Services: Automated elastic resources
+* Google Kubernetes Engine: Hybrid
+* Cloud Functions: Serverless logic
+
+
+## Google Cloud Architecture
+
+.

@@ -1,0 +1,29 @@
+# Networking and Security
+
+## Núvens Híbridas
+
+- Útil para conexões de baixo volume *(pois os dados passam pela internet 
+pública)*
+- Suporta:
+    - Site-to-site VPN
+    - Rotas estáticas ou dinâmicas *(Cloud Router)*
+    - Criptografias IKEv1 e IKEv2
+- Não é compatível com conectividade cliente -> gateway. Isto é, não é possível
+que computadores clientes disquem para a VPN usando um software cliente.
+
+
+*Cloud VPN* conecta redes locais (on-premisses) a redes privadas virtuais 
+*(VPC)* através de túnel VPN IPsec. O tráfico trocado entre as duas redes
+é criptografado por um *Gateway* da *VPN* e descriptografado por outro 
+*Gateway* para proteger os dados que passam pela Internet pública. 
+
+## Interconexão
+
+O *Cloud Interconect* oferece duas opções para estender uma rede local para uma
+rede VPC:
+
+* Cloud Interconnect Dedicated: forma uma conexão física direta entre a rede
+local da organização e a borda de rede do Google Cloud, de modo que seja
+possível transferir grande volume de dados entre as redes. Pode ser mais
+econômico que comprar mais largura de banda na Internet pública.
+* Cloud Interconnect Partner

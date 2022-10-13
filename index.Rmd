@@ -1,0 +1,17 @@
+--- 
+title: "Anotações GCFA3"
+author: "Natanael Magalhães Cardoso"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "Anotações do curso online Google Cloud Computing Foundations"
+---
+
+# Sobre
+Este caderno possui anotações de alguns tópicos do programa de
+treinamento online Google Cloud Computing Foundations 3.
