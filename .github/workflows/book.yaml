@@ -24,10 +24,17 @@ jobs:
     - name: Install Rmarkdown
       run: |
         Rscript -e 'install.packages("rmarkdown")'
+
+    - name: Cache R packages
+      uses: actions/cache@v1
+      with:
+        path: ${{ env.R_LIBS_USER }}
+        key: R-${{ hashFiles('DESCRIPTION') }}
     
     - name: Build the document to all types
       run: |
-        Rscript -e 'rmarkdown::render("docs/my-document.Rmd", output_format = "all")'
+        Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+        Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
     
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
