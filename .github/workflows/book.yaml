@@ -24,6 +24,7 @@ jobs:
     - name: Install Rmarkdown
       run: |
         Rscript -e 'install.packages("rmarkdown")'
+        Rscript -e 'install.packages("bookdown")'
 
     - name: Cache R packages
       uses: actions/cache@v1
