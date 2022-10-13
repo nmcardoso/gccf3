@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Cloud Computing Fundamentals | Anotações GCFA3</title>
+  <meta name="description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Cloud Computing Fundamentals | Anotações GCFA3" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Cloud Computing Fundamentals | Anotações GCFA3" />
+  
+  <meta name="twitter:description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  
+
+<meta name="author" content="Natanael Magalhães Cardoso" />
+
+
+<meta name="date" content="2022-10-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="networking-and-security.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Anotações GCCF3</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre</a></li>
+<li class="chapter" data-level="2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html"><i class="fa fa-check"></i><b>2</b> Cloud Computing Fundamentals</a><ul>
+<li class="chapter" data-level="2.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#cloud-computing"><i class="fa fa-check"></i><b>2.1</b> Cloud Computing</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#primeira-onda"><i class="fa fa-check"></i><b>2.1.1</b> Primeira Onda</a></li>
+<li class="chapter" data-level="2.1.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#segunda-onda"><i class="fa fa-check"></i><b>2.1.2</b> Segunda Onda</a></li>
+<li class="chapter" data-level="2.1.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#terceira-onda"><i class="fa fa-check"></i><b>2.1.3</b> Terceira Onda</a></li>
+<li class="chapter" data-level="2.1.4" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#timeline"><i class="fa fa-check"></i><b>2.1.4</b> Timeline</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#iaas-paas-saas"><i class="fa fa-check"></i><b>2.2</b> IaaS, PaaS, SaaS</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#iaas"><i class="fa fa-check"></i><b>2.2.1</b> IaaS</a></li>
+<li class="chapter" data-level="2.2.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#paas"><i class="fa fa-check"></i><b>2.2.2</b> PaaS</a></li>
+<li class="chapter" data-level="2.2.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#saas"><i class="fa fa-check"></i><b>2.2.3</b> SaaS</a></li>
+<li class="chapter" data-level="2.2.4" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#produtos-gcp"><i class="fa fa-check"></i><b>2.2.4</b> Produtos GCP</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#google-cloud-architecture"><i class="fa fa-check"></i><b>2.3</b> Google Cloud Architecture</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="networking-and-security.html"><a href="networking-and-security.html"><i class="fa fa-check"></i><b>3</b> Networking and Security</a><ul>
+<li class="chapter" data-level="3.1" data-path="networking-and-security.html"><a href="networking-and-security.html#núvens-híbridas"><i class="fa fa-check"></i><b>3.1</b> Núvens Híbridas</a></li>
+<li class="chapter" data-level="3.2" data-path="networking-and-security.html"><a href="networking-and-security.html#interconexão"><i class="fa fa-check"></i><b>3.2</b> Interconexão</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Anotações GCFA3</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cloud-computing-fundamentals" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Capítulo 2</span> Cloud Computing Fundamentals<a href="cloud-computing-fundamentals.html#cloud-computing-fundamentals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="cloud-computing" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.1</span> Cloud Computing<a href="cloud-computing-fundamentals.html#cloud-computing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A computação em nuvem é uma continuação de uma mudança de longo prazo na
+forma como a computação e os recursos são gerenciados. É a continuação de um
+modelo na qual o cliente aluga uma infraestrutura de computação que é gerenciada
+por proficionais dedicados. A Equinix e a CenturyLink são as duas maiores
+provedoras de data centers nos EUA.</p>
+<div id="primeira-onda" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.1.1</span> Primeira Onda<a href="cloud-computing-fundamentals.html#primeira-onda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O conceito da computação em nuvem começou com “colocação”, que tradicionalmente
+não é considerada como computação em núvem, mas foi o início do processo de
+transferência da infraestrutura de TI para fora da organização. As orgamizações
+economizavam dinheiro como a “colocação” pois não precisavam construir datacenters
+e os serviços relacionados. O provedor de “colocação” alugava tudo para a organização.</p>
+</div>
+<div id="segunda-onda" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.1.2</span> Segunda Onda<a href="cloud-computing-fundamentals.html#segunda-onda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Com a computação em núvem surgiram os data centers virtualizados, as máquinas
+virtuais e as API’s. A virtualização oferece elasticidade, uma vez que o
+cliente automiza a aquisição da infrawstrutura ao invés de comprar hardware.
+Com a virtualização, a infraestrutura ainda é mantida. O ambiente ainda é
+controlado e configurado pelo cliente. Ela é como um data center local, mas
+com a diferença de que o hardware está em outro local.</p>
+</div>
+<div id="terceira-onda" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.1.3</span> Terceira Onda<a href="cloud-computing-fundamentals.html#terceira-onda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A onda seguinte da computação em núvem foi a núvem elástica totalmente automatizada.
+Ao invés do cliente manter a infraestrutura, passou a ter serviços automatizados.
+Em uma ambiente totalmente automatizado, os desenvolvedores não pensam em máquinas
+individuais. O serviço de provisiona e configura automaticamente a infraestrutura
+necessária para executar os aplicativos.</p>
+</div>
+<div id="timeline" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.1.4</span> Timeline<a href="cloud-computing-fundamentals.html#timeline" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>1980:</strong> First Wave: Server on premises</p>
+<p>You own everything. It’s yours to manage.</p></li>
+<li><p><strong>2000:</strong> Second Wave: Data centers</p>
+<p>You pay for the hardware but rent the space. Still yours to manage.</p></li>
+<li><p><strong>2006:</strong> First Generation Cloud: Virtualized data centers</p>
+<p>You rent hardware and space, but still control and configure virtual machines.
+Pay for what you provision.</p></li>
+<li><p><strong>2009:</strong> Third Wave: Managed Service</p>
+<p>Completely elastic storage, processing, and machine learning so that you
+can invest your energy in great apps. Pay for what you use.</p></li>
+</ul>
+</div>
+</div>
+<div id="iaas-paas-saas" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.2</span> IaaS, PaaS, SaaS<a href="cloud-computing-fundamentals.html#iaas-paas-saas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Este tópico mostra as diferenças principais entre infraestrutura como serviço,
+plataforma como serviço e software como serviço.</p>
+<div id="iaas" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.2.1</span> IaaS<a href="cloud-computing-fundamentals.html#iaas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O serviço fornece a arquitetura subjacente para você executar os servidores.
+CPU, memória, armazenamento e rede são disponibilizados como serviço, mas
+o usuário precisa gerenciar o sistema operacional e a aplicação.</p>
+</div>
+<div id="paas" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.2.2</span> PaaS<a href="cloud-computing-fundamentals.html#paas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Todo ambiente será gerenciado pera o usuário, que, portanto, só precisará
+gerenciar seus aplicativos. A camada do sistema operacional é gerenciada como
+parte do serviço</p>
+</div>
+<div id="saas" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.2.3</span> SaaS<a href="cloud-computing-fundamentals.html#saas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A infraestrutura, a plataforma e o software são gerenciados pera o usuário.
+Você só precisa colocar seus dados no sistema. O SAP e Salesforce são exemplos
+comerciais de SaaS.</p>
+</div>
+<div id="produtos-gcp" class="section level3 hasAnchor">
+<h3><span class="header-section-number">2.2.4</span> Produtos GCP<a href="cloud-computing-fundamentals.html#produtos-gcp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Compute Engine: IaaS (pay for what you allocate)</li>
+<li>App Engine: PaaS (pay for what you use)</li>
+<li>Managed Services: Automated elastic resources</li>
+<li>Google Kubernetes Engine: Hybrid</li>
+<li>Cloud Functions: Serverless logic</li>
+</ul>
+</div>
+</div>
+<div id="google-cloud-architecture" class="section level2 hasAnchor">
+<h2><span class="header-section-number">2.3</span> Google Cloud Architecture<a href="cloud-computing-fundamentals.html#google-cloud-architecture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>.</p>
+
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="networking-and-security.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nmcardoso/gcfa3/edit/main/01-cloud-computing-fundamentals.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

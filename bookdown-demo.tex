@@ -1,0 +1,263 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Anotações GCFA3},
+  pdfauthor={Natanael Magalhães Cardoso},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Anotações GCFA3}
+\author{Natanael Magalhães Cardoso}
+\date{2022-10-13}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{sobre}{%
+\chapter{Sobre}\label{sobre}}
+
+Este caderno possui anotações de alguns tópicos do programa de
+treinamento online Google Cloud Computing Foundations 3.
+
+\hypertarget{cloud-computing-fundamentals}{%
+\chapter{Cloud Computing Fundamentals}\label{cloud-computing-fundamentals}}
+
+\hypertarget{cloud-computing}{%
+\section{Cloud Computing}\label{cloud-computing}}
+
+A computação em nuvem é uma continuação de uma mudança de longo prazo na
+forma como a computação e os recursos são gerenciados. É a continuação de um
+modelo na qual o cliente aluga uma infraestrutura de computação que é gerenciada
+por proficionais dedicados. A Equinix e a CenturyLink são as duas maiores
+provedoras de data centers nos EUA.
+
+\hypertarget{primeira-onda}{%
+\subsection{Primeira Onda}\label{primeira-onda}}
+
+O conceito da computação em nuvem começou com ``colocação'', que tradicionalmente
+não é considerada como computação em núvem, mas foi o início do processo de
+transferência da infraestrutura de TI para fora da organização. As orgamizações
+economizavam dinheiro como a ``colocação'' pois não precisavam construir datacenters
+e os serviços relacionados. O provedor de ``colocação'' alugava tudo para a organização.
+
+\hypertarget{segunda-onda}{%
+\subsection{Segunda Onda}\label{segunda-onda}}
+
+Com a computação em núvem surgiram os data centers virtualizados, as máquinas
+virtuais e as API's. A virtualização oferece elasticidade, uma vez que o
+cliente automiza a aquisição da infrawstrutura ao invés de comprar hardware.
+Com a virtualização, a infraestrutura ainda é mantida. O ambiente ainda é
+controlado e configurado pelo cliente. Ela é como um data center local, mas
+com a diferença de que o hardware está em outro local.
+
+\hypertarget{terceira-onda}{%
+\subsection{Terceira Onda}\label{terceira-onda}}
+
+A onda seguinte da computação em núvem foi a núvem elástica totalmente automatizada.
+Ao invés do cliente manter a infraestrutura, passou a ter serviços automatizados.
+Em uma ambiente totalmente automatizado, os desenvolvedores não pensam em máquinas
+individuais. O serviço de provisiona e configura automaticamente a infraestrutura
+necessária para executar os aplicativos.
+
+\hypertarget{timeline}{%
+\subsection{Timeline}\label{timeline}}
+
+\begin{itemize}
+\item
+  \textbf{1980:} First Wave: Server on premises
+
+  You own everything. It's yours to manage.
+\item
+  \textbf{2000:} Second Wave: Data centers
+
+  You pay for the hardware but rent the space. Still yours to manage.
+\item
+  \textbf{2006:} First Generation Cloud: Virtualized data centers
+
+  You rent hardware and space, but still control and configure virtual machines.
+  Pay for what you provision.
+\item
+  \textbf{2009:} Third Wave: Managed Service
+
+  Completely elastic storage, processing, and machine learning so that you
+  can invest your energy in great apps. Pay for what you use.
+\end{itemize}
+
+\hypertarget{iaas-paas-saas}{%
+\section{IaaS, PaaS, SaaS}\label{iaas-paas-saas}}
+
+Este tópico mostra as diferenças principais entre infraestrutura como serviço,
+plataforma como serviço e software como serviço.
+
+\hypertarget{iaas}{%
+\subsection{IaaS}\label{iaas}}
+
+O serviço fornece a arquitetura subjacente para você executar os servidores.
+CPU, memória, armazenamento e rede são disponibilizados como serviço, mas
+o usuário precisa gerenciar o sistema operacional e a aplicação.
+
+\hypertarget{paas}{%
+\subsection{PaaS}\label{paas}}
+
+Todo ambiente será gerenciado pera o usuário, que, portanto, só precisará
+gerenciar seus aplicativos. A camada do sistema operacional é gerenciada como
+parte do serviço
+
+\hypertarget{saas}{%
+\subsection{SaaS}\label{saas}}
+
+A infraestrutura, a plataforma e o software são gerenciados pera o usuário.
+Você só precisa colocar seus dados no sistema. O SAP e Salesforce são exemplos
+comerciais de SaaS.
+
+\hypertarget{produtos-gcp}{%
+\subsection{Produtos GCP}\label{produtos-gcp}}
+
+\begin{itemize}
+\tightlist
+\item
+  Compute Engine: IaaS (pay for what you allocate)
+\item
+  App Engine: PaaS (pay for what you use)
+\item
+  Managed Services: Automated elastic resources
+\item
+  Google Kubernetes Engine: Hybrid
+\item
+  Cloud Functions: Serverless logic
+\end{itemize}
+
+\hypertarget{google-cloud-architecture}{%
+\section{Google Cloud Architecture}\label{google-cloud-architecture}}
+
+.
+
+\hypertarget{networking-and-security}{%
+\chapter{Networking and Security}\label{networking-and-security}}
+
+\hypertarget{nuxfavens-huxedbridas}{%
+\section{Núvens Híbridas}\label{nuxfavens-huxedbridas}}
+
+\begin{itemize}
+\tightlist
+\item
+  Útil para conexões de baixo volume \emph{(pois os dados passam pela internet
+  pública)}
+\item
+  Suporta:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Site-to-site VPN
+  \item
+    Rotas estáticas ou dinâmicas \emph{(Cloud Router)}
+  \item
+    Criptografias IKEv1 e IKEv2
+  \end{itemize}
+\item
+  Não é compatível com conectividade cliente -\textgreater{} gateway. Isto é, não é possível
+  que computadores clientes disquem para a VPN usando um software cliente.
+\end{itemize}
+
+\emph{Cloud VPN} conecta redes locais (on-premisses) a redes privadas virtuais
+\emph{(VPC)} através de túnel VPN IPsec. O tráfico trocado entre as duas redes
+é criptografado por um \emph{Gateway} da \emph{VPN} e descriptografado por outro
+\emph{Gateway} para proteger os dados que passam pela Internet pública.
+
+\hypertarget{interconexuxe3o}{%
+\section{Interconexão}\label{interconexuxe3o}}
+
+O \emph{Cloud Interconect} oferece duas opções para estender uma rede local para uma
+rede VPC:
+
+\begin{itemize}
+\tightlist
+\item
+  Cloud Interconnect Dedicated: forma uma conexão física direta entre a rede
+  local da organização e a borda de rede do Google Cloud, de modo que seja
+  possível transferir grande volume de dados entre as redes. Pode ser mais
+  econômico que comprar mais largura de banda na Internet pública.
+\item
+  Cloud Interconnect Partner
+\end{itemize}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

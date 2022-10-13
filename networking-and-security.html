@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Networking and Security | Anotações GCFA3</title>
+  <meta name="description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Networking and Security | Anotações GCFA3" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Networking and Security | Anotações GCFA3" />
+  
+  <meta name="twitter:description" content="Anotações do curso online Google Cloud Computing Foundations" />
+  
+
+<meta name="author" content="Natanael Magalhães Cardoso" />
+
+
+<meta name="date" content="2022-10-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cloud-computing-fundamentals.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Anotações GCCF3</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Sobre</a></li>
+<li class="chapter" data-level="2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html"><i class="fa fa-check"></i><b>2</b> Cloud Computing Fundamentals</a><ul>
+<li class="chapter" data-level="2.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#cloud-computing"><i class="fa fa-check"></i><b>2.1</b> Cloud Computing</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#primeira-onda"><i class="fa fa-check"></i><b>2.1.1</b> Primeira Onda</a></li>
+<li class="chapter" data-level="2.1.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#segunda-onda"><i class="fa fa-check"></i><b>2.1.2</b> Segunda Onda</a></li>
+<li class="chapter" data-level="2.1.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#terceira-onda"><i class="fa fa-check"></i><b>2.1.3</b> Terceira Onda</a></li>
+<li class="chapter" data-level="2.1.4" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#timeline"><i class="fa fa-check"></i><b>2.1.4</b> Timeline</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#iaas-paas-saas"><i class="fa fa-check"></i><b>2.2</b> IaaS, PaaS, SaaS</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#iaas"><i class="fa fa-check"></i><b>2.2.1</b> IaaS</a></li>
+<li class="chapter" data-level="2.2.2" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#paas"><i class="fa fa-check"></i><b>2.2.2</b> PaaS</a></li>
+<li class="chapter" data-level="2.2.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#saas"><i class="fa fa-check"></i><b>2.2.3</b> SaaS</a></li>
+<li class="chapter" data-level="2.2.4" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#produtos-gcp"><i class="fa fa-check"></i><b>2.2.4</b> Produtos GCP</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="cloud-computing-fundamentals.html"><a href="cloud-computing-fundamentals.html#google-cloud-architecture"><i class="fa fa-check"></i><b>2.3</b> Google Cloud Architecture</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="networking-and-security.html"><a href="networking-and-security.html"><i class="fa fa-check"></i><b>3</b> Networking and Security</a><ul>
+<li class="chapter" data-level="3.1" data-path="networking-and-security.html"><a href="networking-and-security.html#núvens-híbridas"><i class="fa fa-check"></i><b>3.1</b> Núvens Híbridas</a></li>
+<li class="chapter" data-level="3.2" data-path="networking-and-security.html"><a href="networking-and-security.html#interconexão"><i class="fa fa-check"></i><b>3.2</b> Interconexão</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Anotações GCFA3</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="networking-and-security" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Capítulo 3</span> Networking and Security<a href="networking-and-security.html#networking-and-security" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="núvens-híbridas" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.1</span> Núvens Híbridas<a href="networking-and-security.html#núvens-híbridas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Útil para conexões de baixo volume <em>(pois os dados passam pela internet
+pública)</em></li>
+<li>Suporta:
+<ul>
+<li>Site-to-site VPN</li>
+<li>Rotas estáticas ou dinâmicas <em>(Cloud Router)</em></li>
+<li>Criptografias IKEv1 e IKEv2</li>
+</ul></li>
+<li>Não é compatível com conectividade cliente -&gt; gateway. Isto é, não é possível
+que computadores clientes disquem para a VPN usando um software cliente.</li>
+</ul>
+<p><em>Cloud VPN</em> conecta redes locais (on-premisses) a redes privadas virtuais
+<em>(VPC)</em> através de túnel VPN IPsec. O tráfico trocado entre as duas redes
+é criptografado por um <em>Gateway</em> da <em>VPN</em> e descriptografado por outro
+<em>Gateway</em> para proteger os dados que passam pela Internet pública.</p>
+</div>
+<div id="interconexão" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.2</span> Interconexão<a href="networking-and-security.html#interconexão" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O <em>Cloud Interconect</em> oferece duas opções para estender uma rede local para uma
+rede VPC:</p>
+<ul>
+<li>Cloud Interconnect Dedicated: forma uma conexão física direta entre a rede
+local da organização e a borda de rede do Google Cloud, de modo que seja
+possível transferir grande volume de dados entre as redes. Pode ser mais
+econômico que comprar mais largura de banda na Internet pública.</li>
+<li>Cloud Interconnect Partner</li>
+</ul>
+
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cloud-computing-fundamentals.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nmcardoso/gcfa3/edit/main/03-network-security.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
