@@ -1,0 +1,27 @@
+## Opções de Armazenamento na nuvem
+
+* Cloud Storage
+
+Base de dados relacionais:
+* Cloud SQL 
+* Cloud Planner
+Base de dados não relacionais
+
+* Cloud Datastore
+* Cloud Bigtable
+
+* BigQuery
+
+### Tipos de uso comuns:
+1. Armazenamento e entrega de conteúdo
+2. Armazenamento para análise de dados e computação geral
+3. Backup e armazenamento de arquivo
+
+AIzaSyADOJSKNsAzUojaYlUVn8nk0VNjNK9wPFw
+
+## Armazenamento estruturado e não estruturado na Nuvem
+
+## Lab CLI/SDK
+
+## Administrando Serviços SQL
+
